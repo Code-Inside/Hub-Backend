@@ -7,8 +7,11 @@ namespace Hub
 {
     public class SloaderFunctions
     {
+        /// <summary>
+        /// Cron: Each day at 5.30
+        /// </summary>
         [FunctionName("Sloader")]
-        public void Run([TimerTrigger("0 */5 * * * *")] TimerInfo myTimer, ILogger log)
+        public void Run([TimerTrigger("0 30 5 * * *")] TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"Sloader Function invoked at: {DateTime.Now}");
 
